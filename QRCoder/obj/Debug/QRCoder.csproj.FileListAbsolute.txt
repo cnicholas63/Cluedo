@@ -1,0 +1,4 @@
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoder\bin\Debug\QRCoder.dll
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoder\bin\Debug\QRCoder.pdb
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoder\obj\Debug\QRCoder.dll
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoder\obj\Debug\QRCoder.pdb

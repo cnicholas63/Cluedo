@@ -1,0 +1,4 @@
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoderDemo\obj\x86\Debug\QRCoderDemo.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoderDemo\obj\x86\Debug\QRCoderDemo.Form1.resources
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoderDemo\obj\x86\Debug\QRCoderDemo.Properties.Resources.resources
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\QRCoderDemo\obj\x86\Debug\QRCoderDemo.csproj.GenerateResource.Cache

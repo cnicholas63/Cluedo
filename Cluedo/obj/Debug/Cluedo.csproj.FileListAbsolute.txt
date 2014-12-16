@@ -1,0 +1,11 @@
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\bin\Debug\Cluedo.exe.config
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\bin\Debug\Cluedo.exe
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\bin\Debug\Cluedo.pdb
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\bin\Debug\QRCoder.dll
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\bin\Debug\QRCoder.pdb
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\obj\Debug\Cluedo.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\obj\Debug\Cluedo.Form1.resources
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\obj\Debug\Cluedo.Properties.Resources.resources
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\obj\Debug\Cluedo.csproj.GenerateResource.Cache
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\obj\Debug\Cluedo.exe
+C:\Users\Chris\Source\Repos\Csharp\Cluedo\Cluedo\obj\Debug\Cluedo.pdb
