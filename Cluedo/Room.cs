@@ -16,7 +16,7 @@ namespace Cluedo
 {
     class Room
     {
-        ArrayList<Suspect> susp;
+//        ArrayList<Suspect> susp;
 
         List<Suspect> visitors; // Declare List of type String that will hold visitors to the room
         List<String> objects;  // Declare List of type String that will hold objects in the room
@@ -29,27 +29,38 @@ namespace Cluedo
         }
 
         
-        // Suspect enters the room
-        public void AddVisitor(Suspect suspect)
+        // Suspect enters the room - Returns an False if the person is already there
+        public Boolean AddVisitor(Suspect suspect)
         {
+            foreach (Suspect sus in visitors) // Is the suspect already in the room?
+            {
+                if (suspect.name.Equals(sus.name))
+                {  // Error, this person is already in this room
+                    return false;
+                }
+            }
+            visitors.Add(suspect); // Add visitor to the list
 
+            Console.WriteLine("Visitor entered the room: " + suspect.name); ///////// Debug Delete when finished
+            return true; // Visitor successfully entered the room
         }
 
         // Suspect leaves the room
         // Returns true if successful, false if the suspect cannot be found in the room
-        Boolean RemoveVisitor(Suspect suspect)
+        public Boolean RemoveVisitor(Suspect suspect)
         {
-            foreach(Suspect vis in visitors ) {
-                if()
+            foreach (Suspect vis in visitors)
+            { // Is the suspect in the room?
+                if (suspect.name.Equals(vis.name))
+                {
+                    visitors.Remove(vis);       // Remove visitor from the list
+                    Console.WriteLine("Visior left the room: " + suspect.name); ///////// Debug Delete when finished
 
-
+                    return true; // Success
+                }
             }
 
-
-                return true;
+            return false; // Error, the visitor was not in the room
         }
-
-
-
     }
 }

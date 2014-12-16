@@ -15,9 +15,9 @@ namespace Cluedo
 
     class Suspect
     {
-        String name; // Suspects name
-        int room;    // Suspects room location (if not on a square)
-        int square;  // Board square that the suspect is on (if not in a room)
+        public String name; // Suspects name
+        public int room;    // Suspects room location (if not on a square)
+        public int square;  // Board square that the suspect is on (if not in a room)
 
         // Constructor requires suspect's name and location (room index no)
         // Suspects start the game in a room, so no square location is needed

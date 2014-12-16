@@ -27,36 +27,51 @@ namespace Cluedo
         int xOffset = 250; // Offset from left hand side 
         int yOffset = 100;
 
-
-
-
+        /* 
+         * Initialise the main form
+         */
         public Form1()
         {
             InitializeComponent();
 
-            textBox1.Text = "Hello";
 
 //            button7.Click += new System.EventHandler(this.myEventHandler);
-
-            for(int t = 0; t < squares.Length; t++) {
-                squares[t] = createButton("Square " + t, 75, 75, xPos[t] + xOffset, yPos[t] + yOffset);
-                squares[t].Click += new System.EventHandler(this.myEventHandler);
-                this.Controls.Add(squares[t]);
-            }
-            
 //            myButton = createButton("Dynamic Button", 100, 100, 100, 100);
 //            myButton.Click += new System.EventHandler(this.myEventHandler);
 //            this.Controls.Add(myButton);
 //            Console.WriteLine("Button should be added");
 
+            drawBoard(); // Draw board components
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Console.WriteLine("Hello");
 
-            //System.Windows.Forms.PictureBox pb = new PictureBox()
- 
+        }
+
+        // Draw components onto the board
+        private void drawBoard()
+        {
+            textBox1.Text = "Hello";
+            for(int t = 0; t < squares.Length; t++) {
+                squares[t] = createButton("Square " + t, 75, 75, xPos[t] + xOffset, yPos[t] + yOffset);
+                squares[t].Click += new System.EventHandler(this.myEventHandler);
+                this.Controls.Add(squares[t]);
+            } 
+
+        }
+
+        // Deal Cards
+        private void dealCards()
+        {
+
+        }
+
+        // Initialise the players
+        private void iniPlayers()
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
