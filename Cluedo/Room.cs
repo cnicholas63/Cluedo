@@ -33,14 +33,6 @@ namespace Cluedo
         // Suspect enters the room - Returns an False if the person is already there
         public Boolean AddVisitor(Suspect suspect)
         {
-            //foreach (Suspect sus in visitors) // Is the suspect already in the room?
-            //{
-            //    if (suspect.name.Equals(sus.name))
-            //    {  // Error, this person is already in this room
-            //        return false;
-            //    }
-            //}
-
             foreach (Suspect vis in visitors)
             {
                 if (suspect == vis) // Is this person is already in the room?
@@ -62,17 +54,6 @@ namespace Cluedo
         // Returns true if successful, false if the suspect cannot be found in the room
         public Boolean RemoveVisitor(Suspect suspect)
         {
-            //foreach (Suspect vis in visitors)
-            //{ // Is the suspect in the room?
-            //    if (suspect.name.Equals(vis.name))
-            //    {
-            //        visitors.Remove(vis);       // Remove visitor from the list
-            //        Console.WriteLine("Visior left the room: " + suspect.name); ///////// Debug Delete when finished
-
-            //        return true; // Success
-            //    }
-            //}
-            
             foreach (Suspect vis in visitors)
             { // Is the suspect in the room?
                 if (suspect == vis)

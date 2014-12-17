@@ -17,9 +17,9 @@ namespace Cluedo
         QRCodeGenerator qrGenerator = new QRCodeGenerator();
         private Button myButton;
         
-        // Declare array with 24 elements of type button, these represent the board squares (not rooms)
-        // The buttons will be created dynamically
-        Button[] squares = new Button[24];
+        // Declare array with 24 elements of type BoardSquare, these represent the board squares (not rooms)
+        // The BoardSquare buttons will be created dynamically
+        BoardSquare[] squares = new BoardSquare[24];
 
         String[] names = { "Chris", "Jeni", "Craig", "Warren", "Melissa", "Ethan", "Megan", "Keira", "Grace" };
         Suspect[] suspects = new Suspect[9];
@@ -93,15 +93,19 @@ namespace Cluedo
         {
             textBox1.Text = "Hello";
 
-            // Draw squares onto the board
-            // Dynamically create buttons, give them an event handler and placce on the board
-            for(int t = 0; t < squares.Length; t++) { 
-                squares[t] = createButton("Square " + t, 75, 75, xPos[t] + xOffset, yPos[t] + yOffset);
-                squares[t].Click += new System.EventHandler(this.myEventHandler);
-                this.Controls.Add(squares[t]);
+            // Board squares are actually form buttons
+            // For loop to instantiate and draw squares onto the board
+            // Dynamically create buttons, give them an event handler and place on the board
+            for(int t = 0; t < squares.Length; t++) {
+                squares[t] = new BoardSquare(); // Construct the board square
+                squares[t].square = createButton("Square " + t, 75, 75, xPos[t] + xOffset, yPos[t] + yOffset); // Add form button to square
+                squares[t].square.Click += new System.EventHandler(this.myEventHandler); // Add event handler to the square
+                this.Controls.Add(squares[t].square); // Add the square to the board
             } 
 
             // Draw rooms onto the board
+
+            this.Controls.Add(new RoomPanel("Computer Lab").panel);
 
         }
 
