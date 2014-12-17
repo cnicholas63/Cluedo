@@ -92,11 +92,16 @@ namespace Cluedo
         private void drawBoard()
         {
             textBox1.Text = "Hello";
-            for(int t = 0; t < squares.Length; t++) {
+
+            // Draw squares onto the board
+            // Dynamically create buttons, give them an event handler and placce on the board
+            for(int t = 0; t < squares.Length; t++) { 
                 squares[t] = createButton("Square " + t, 75, 75, xPos[t] + xOffset, yPos[t] + yOffset);
                 squares[t].Click += new System.EventHandler(this.myEventHandler);
                 this.Controls.Add(squares[t]);
             } 
+
+            // Draw rooms onto the board
 
         }
 
@@ -128,6 +133,7 @@ namespace Cluedo
             pictureBox1.BackgroundImage = qrCode.GetGraphic(20); // Generate QR code and store in picture box
 
             button1.Text = textBox1.Text;
+            label2.Text = textBox1.Text;
         }
 
         private void myEventHandler(object sender, EventArgs e)
@@ -136,22 +142,21 @@ namespace Cluedo
 
         }
 
+        
+        // This method creates a  button dynamically, according to the parameters recieved
+        // It does not place the button on a form or give it an even listener
         private Button createButton(String label, int width, int height, int topLeft, int topRight)
         {
-            Button button = new Button();
+            Button button = new Button();   // Instantiate button
 
-            button.Text = label;
+            button.Text = label;            // Assign label
 
-            button.Width = width;
-            button.Height = height;
-            button.Location = new Point(topLeft, topRight);
+            button.Width = width;           // Set the width
+            button.Height = height;         // Set the height
+            button.Location = new Point(topLeft, topRight); // Set the button location
 
-            return button;
-
-
+            return button; // Return the button
         }
-
-
 
     }
 }

@@ -28,7 +28,7 @@ namespace Cluedo
             square = -1;      // indicates that the suspect is not on a square
         }
 
-
+       
 
     }
 }
