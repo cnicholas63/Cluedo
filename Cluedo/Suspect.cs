@@ -1,6 +1,6 @@
 ﻿/*
  * Chris Nicholas 16/12/14
- * The Suspect class holds information about suspects
+ * The Suspect class holds information about a suspect
  * including name, location, etc.
  */
 

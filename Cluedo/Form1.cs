@@ -21,6 +21,9 @@ namespace Cluedo
         // The buttons will be created dynamically
         Button[] squares = new Button[24];
 
+        String[] names = { "Chris", "Jeni", "Craig", "Warren", "Melissa", "Ethan", "Megan", "Keira", "Grace" };
+        Suspect[] suspects = new Suspect[9];
+
         // xPos and yPos arrays representing the X and Y coordinates of the buttons
         int[] xPos = { 0, 75, 150, 225, 300, 375, 450, 450, 450, 450, 450, 450, 450, 375, 300, 225, 150, 75, 0, 0, 0, 0, 0, 0};
         int[] yPos = { 0, 0, 0, 0, 0, 0, 0, 75, 150, 225, 300, 375, 450, 450, 450, 450, 450, 450, 450, 375, 300, 225, 150, 75};
@@ -42,6 +45,41 @@ namespace Cluedo
 //            Console.WriteLine("Button should be added");
 
             drawBoard(); // Draw board components
+
+            Room room = new Room("Computer Room");
+
+            for (int t = 0; t < names.Length; t++)
+            {
+                suspects[t] = new Suspect(names[t], t);
+
+                if (!room.AddVisitor(suspects[t]))
+                {
+                    Console.WriteLine("Visitor Already in Room: " + suspects[t]);
+                }
+
+
+            }
+
+            room.ListVisitors();
+
+            suspects[7].room = 0;
+
+            if (!room.AddVisitor(suspects[7]))
+            {
+                Console.WriteLine("ERROR WRONG VISITOR");
+            }
+            
+            int j = 0;
+            // TRY DELETING ALL VISITORS
+            while (room.Count() > 0)
+            {
+                
+                room.RemoveVisitor(suspects[j++]);
+            }
+
+            Console.WriteLine("Room is empty");
+            room.ListVisitors();
+
 
         }
 

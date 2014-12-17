@@ -17,7 +17,7 @@ namespace Cluedo
         List<Card> cards; // List holding the cards
         String[] characters = {"Mark", "Collette", "Chris", "Dan", "Darryl", "Sally", "Peter" };
         String[] weapons = {"Pen Drive", "Power Cable", "Keyboard", "Stapler", "Soldering Iron", "Scissors", "Death by PowerPoint!" };
-        String[] locations = { "CE011 The Big Guns", "School Office", "Lecture Theatre", "Laptop Lab", "Network Lab", "CE foyer", "Research Lab" };
+        String[] locations = { "CE011 The Big Guns Office", "School Office", "Lecture Theatre", "Laptop Lab", "Network Lab", "CE foyer", "Research Lab" };
 
         // Constructor
         public Deck()
@@ -32,31 +32,31 @@ namespace Cluedo
 
         // Gets a suspect card from the unshuffled deck and remove it from deck
         public Card getSuspectCard() {
-            
+            return new Card("Test", 1);
         }
 
         // Get a weapon card from the deck and remove it from deck
         public Card getWeaponCard()
         {
-
+            return new Card("Test", 1);
         }
 
         // Get a location card and remove it from deck
         public Card getLocationCard()
         {
-
+            return new Card("Test", 1);
         }
 
         // Shuffle the cards
         public void shuffle()
         {
-
+           
         }
 
         // Get a card from the shuffled deck and remove it from deck
         public Card getCard()
         {
-
+            return new Card("Test", 1);
         }
 
     }
